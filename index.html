@@ -6,14 +6,12 @@
 				var val = '';
 				
 				if(input.value.startsWith("-d")){
-					console.log('decrypt');
 					val = blowfish.decrypt(
 						blowfish.decrypt(
 							blowfish.decrypt(input.value.substring(2), '', {cipherMode: 0, outputType: 0})
 						, '', {cipherMode: 0, outputType: 0})
 					, '', {cipherMode: 0, outputType: 0});
 				} else {
-					console.log('encrypt');
 					val = blowfish.encrypt(
 						blowfish.encrypt(
 							blowfish.encrypt(input.value, '', {cipherMode: 0, outputType: 0})
